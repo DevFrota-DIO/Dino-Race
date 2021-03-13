@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/options.css">
+  <link rel="icon" type="image/png" sizes="64x64" href='../img/itens/logo/logo-goo.png'>
+   <script src="../js/principal.js" charset="UTF-8" defer></script><!--JS que cria as divs flutuantes do game -->
+  <script src="../js/efects.js" charset="UTF-8" defer></script><!-- JS para  Sons e efeitos-->
+  <script src="../js/fakePopup.js" charset="UTF-8" defer></script> <!--Simular Frames/Janelas Popups  -->
+
+</head>
+
+<body onload="creditsCountRegres();">
+  <!-- FakePopup page2 -->
+  <div id="pop" class="idea">
+  <!-- Contagem Regressiva -->
+    <div id=divCountRegres>
+
+    </div>
+    <!-- Fim contagem -->
+    <h1>Vamos nos divertir?</h1>
+    <div class="controles">
+      <button id="buttonOk" onclick="randomAudio(2,1);play(2);create(true); pegaOption('options')">Jogar</button>
+      <button id="buttonFechar" onclick="window.open('../index.html','_self')">Opções</button>
+    </div>
+    <br/>
+    
+  </div>
+  <!-- Fim FakePopup page2 -->
+<!-- Div Contendo o Game -->
+  <div class="tela">
+    
+    <audio id="audioError"  loop="false"></audio>
+    <audio id="audioHits"  loop="false"></audio>
+    <audio id="audioJump"  loop="false"></audio>
+    <audio id="audioAviso"  loop="false"></audio>
+    <audio id="audioOver"  loop="false"></audio>
+    <audio id="audioBonus"  loop="false"></audio>
+
+    <div></div>
+    <div id="fundo" class="background">
+      <div id="bonus"></div>
+      <div id="atleta" class="atleta"></div>
+      <div class="esteira"></div>
+      
+      <div class="controles2">
+        <h1 id="contadorHits" style="margin-right: 50px;">Acertos   0</h1>
+        <audio id="audioJogo" loop="false"></audio>
+        <button id="bntPlay" onclick="document.getElementById('audioJogo').play(2)">▶</button>
+        <button id="bntPause" onclick="document.getElementById('audioJogo').pause(2)">⏸︎</button>
+        <button id="bntMais" onclick="document.getElementById('audioJogo').volume+=0.1">⏶︎</button>
+        <button id="bntMenos" onclick="document.getElementById('audioJogo').volume-=0.1">⏷︎</button>
+        <h1 id="contadorError" style="margin-left: 50px;">Erros   0</h1>
+        <!-- <div class="grama"></div> -->
+      </div>
+      <button  class="opcoesIn" onclick="window.open('./stop.html','_self')">Cafézinho</button>
+      <button id="buttonOpcoes" class="opcoesIn" onclick="window.open('../index.html','_self')">Opções</button>
+     
+    </div>
+
+  </div>
+  <!-- Fim div contendo o Game -->
+  <script src="../js/random.js" charset="UTF-8"></script>
+
+</body>
+
+</html>

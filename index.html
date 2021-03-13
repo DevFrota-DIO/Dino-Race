@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dino Opções</title>
+  <link rel="stylesheet" href="css/options.css">
+  <link rel="icon" type="image/png" sizes="64x64" href='./img/itens/logo/logo-goo.png'>
+  <script src="js/fakePopup.js" charset="UTF-8" defer></script>
+<script src="js/efects.js" charset="UTF-8" defer></script>
+<script src="js/dataHora.js" charset="UTF-8" defer></script>
+</head>
+
+<body id="prim" onload="randomCreditosOne(1)">
+  <!-- Flutuante em tela cheia -->
+  <div id="pop">
+    <header><div class="logo"></div> <div id="divH2"><h2 id="h2Data" ></h2></div></header>
+   
+    <br><br><br><br><br>
+    <h1 style="font-family: Segoe UI; font-size: x-larger;">Vamos nos divertir?</h1>
+    <div class="controles" >
+      <d-iv id="divReturnOptions" style=" text-align: center;">
+        <h3 id="titlePrimOption" style="font-family: Segoe UI; font-size: larger;">Escolha a combinação de teclas para jogar</h3><br>
+      <div style="text-align: -webkit-center; width: 100%;">
+              <button onclick="primSetForm(true)" id="optionReturn" style="margin-left: 10px; font-family: Segoe UI; font-size:larger; width: 100px; height: 40px; display: none;">Retornar</button>
+
+      </div>
+      <br>
+    
+      </d-iv>
+      
+<!-- combinação radiobox-->
+<div id="divPrimOptios" style="display: block; text-align: center; font-family: Segoe UI; font-size: large;">
+<form id="firstOptions" method="POST"  style="display:inline-flex">
+  
+  <input type="radio" id="keysDefault" name="inputDef" value="keysDefault" onchange="primSetForm(false, this.value)">
+  <label for="default">Usar Padrão</label><br>
+  <input type="radio" id="moreKeys" name="inputDef" value="moreKeys" onchange="primSetForm(false, this.value)" style="margin-left: 10px;">
+  <label for="more" >Mais Combinações</label><br>
+
+
+</form></div>
+      <!-- combinação Listbox-->
+      <button id="optionList" style="width: 200px;" onclick="setOptionKey(1)" style="display: none;">Lista Padrão</button>
+      <button id="optionPerson" style="width: 200px;" onclick="setOptionKey(2)" style="display: none;">Personalizar</button><br><br>
+      <form id="formOptionKey" method="GET" style="font-family: 'Segoi UI'; display: none; list-style-position: block;text-align: left;">
+  <input type="radio" id="comb1" name="setKeys" value="comb1" onchange="primSetForm(false, this.value)"style="margin-bottom: 10px;">
+  <label id="labelOne">4 = Pular, 5 = Impulso</label><br>
+  <input type="radio" id="comb2" name="setKeys" value="comb2" onchange="primSetForm(false, this.value)" style="margin-bottom: 10px;">
+  <label id="labelTwo" >V = Pular, Espaço = Impulso</label><br>
+  <input type="radio" id="comb3" name="setKeys" value="comb3" onchange="primSetForm(false, this.value)" style="margin-bottom: 10px;">
+  <label id="labelThree">W = Pular, D = Impulso</label><br>
+      </form><br><br/><br/>
+      
+      <button id="buttonOk" onclick="randomAudio(1,0);play(1)" style="display:none">Jogar</button>
+      <button id="buttonFechar" onclick="tabClose()" style="display:none">Fechar</button>
+    </div>
+    
+    <br/>
+    <div id="primFooter"></div>
+    </div>
+    <div id="container" style="display: none;">
+  <audio id="audioInicio"  loop="true"></audio>
+  <div class="controles" >
+
+    <button id="buttonPlay" onclick="document.getElementById('audioInicio').play()" >▶</button>
+    <button id="buttonPause" onclick="document.getElementById('audioInicio').pause()" >⏸︎</button>
+    <button id="buttonMais" onclick="document.getElementById('audioInicio').volume+=0.1" >⏶︎</button>
+    <button id="buttonMenos" onclick="document.getElementById('audioInicio').volume-=0.1" >⏷︎</button>
+  </div>
+<div class="optionTitle"><h1>Escolha seu Atleta.</h1></div> 
+<br/>       <div class="popAtletas">
+<ul class="ulPopup">
+    <li id="1"><a type="button" href="#" onclick="setAtleta(1)"><img  src="img/options/option1.png" alt="Aranha"></a></li>
+    <li id="2"><a type="button" href="#" onclick="setAtleta(2)"><img src="img/options/option2.png" alt="Mônica"></a></li> 
+    <li id="3"><a type="button" href="#" onclick="setAtleta(3)"><img src="img/options/option3.png" alt="Papa-léguas"></a></li>
+    <li id="4"><a type="button" href="#" onclick="setAtleta(4)"><img src="img/options/option4.png" alt="Rex"></a></li>
+</ul>
+
+<div id="botaoStart">
+<button id="playGame" class="allButons" value="Play Game">Play Game</button>
+
+</div>
+<h2 style="text-align: center; color: #d4eba6; font-family: 'Código-fonte Pro', monospace ">Bem vindo ao Dino Race!</h2><br>
+<div class="divInfo">
+  
+<p id="help" class="info">
+  
+<b >O jogo é muito simples:</b><br>
+•	Você só precisa acompanhar o seu atleta escolhido e tentar evitar que ele seja atingido pelos obstáculos vindos em sua direção na esteira.<br>
+•	Caso seu atleta seja atingido, o contador marcará o erro e continuará contando cada erro seu durante o jogo.<br>
+•	Você perde quando o contador atinge a marca de 5 erros.<br><br>
+
+<b>Bônus!</b><br>
+•	Há também um contador de acertos.<br>
+•	A cada 10 obstáculos vencidos os seus erros serão totalmente zerados.<br>
+•	E muitas outras surpresas. Legal né!<br><br>
+
+<b>Controles</b><br>
+•	Por padrão, jogue com as teclas do Teclado Numérico. <br>
+
+•	E use uma combinação das teclas '4' para saltar e '5' para um salto mais longo.<br><br>
+
+Viu só! Dá até pra tomar um cafezinho enquanto se diverte!<br><br>
+
+<b>Preparado?</b><br>
+Então escolha seu atleta, clique em <b>Play Game</b> e divirta-se!<br>
+</p>
+</div>
+</div>
+</div> 
+</body>
+<!-- UFA -->
+</html>
