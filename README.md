@@ -7,8 +7,9 @@
 - Virei, revirei, repuxei, reescrevi, editei várias imagens, adcionei mai um pouco aqui e acolá e...
 - Voilá ! Um novo Dino quentinho.
 - Ainda faltou a parte da responsividade  estou vendo isso.
-- E, na verdade, aprendi muito em todo esse processo.
-- Não me detive em tentar fazer o código mais bonito do mundo, tentei me ater mais a lógica envolvida.
+- Portanto, as telas que  ficarem um pouco estranhas, por enquanto, corrijam  utilizando o zoom do navegador.
+- **Na verdade, aprendi muito em todo esse processo. Ainda tem muito chão pela frente.**
+- Não procurei fazer o código mais bonito do mundo, tentei me ater mais a lógica envolvida.
 - Acho que ficou bem bonitinho e divertido!
 - E ótimo para apresentar como uma ideia a ser implementada.
 - No futuro vou dar uma ajeitada no código pra que fique mais apresentável.
