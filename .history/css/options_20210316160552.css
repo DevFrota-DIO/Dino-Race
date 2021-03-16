@@ -126,13 +126,13 @@ font-size: x-large;
 {
   z-index: 1100;
   position: relative;
+  position: relative;
   top: -110px;
   display: inline-block;
   text-align: center;
   width: 550px;
   background-color: #183a22c9;
   padding-bottom: 30px;
-  margin-left: -5%;
 
 }
 .controles2 h1

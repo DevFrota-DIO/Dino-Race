@@ -185,7 +185,7 @@ html {
 }
 
 .tela {
- background-size: 100% 100%;
+  margin: auto;
 
   position: fixed;
   background-image: linear-gradient(to top, #0592c5, #5e93a7, #88D5F1 60%);

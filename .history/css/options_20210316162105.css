@@ -126,6 +126,7 @@ font-size: x-large;
 {
   z-index: 1100;
   position: relative;
+  position: relative;
   top: -110px;
   display: inline-block;
   text-align: center;
