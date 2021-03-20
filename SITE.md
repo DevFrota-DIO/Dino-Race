@@ -1,5 +1,5 @@
 # Agora tem site pra gente experimentar o Dino Race.
-## E também outros futuros projetos estarão sendo adcionados por lá.
+## E também outros futuros projetos estarão sendo adicionados por lá.
 
 ## Entra lá, clica e segue as orientações que é facinho jogar.
 
