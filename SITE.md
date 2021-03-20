@@ -3,4 +3,4 @@
 
 ## Entra lá clica e segue as orientações que é facinho jogar.
 
-### Aqui o [GooTopps.com]([https://link](https://gootopps.epizy.com/))
+### Aqui o [GooTopps.com](https://gootopps.epizy.com/)
