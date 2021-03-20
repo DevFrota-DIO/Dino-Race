@@ -1,5 +1,5 @@
 
-// Simples porém funcional. Mão na roda
+// Enviando valores
 function setData(num1, num2) {
     var valor = [num1, num2];
     var myWindow = window.open(

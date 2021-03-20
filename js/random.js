@@ -58,6 +58,7 @@ var audioJogo = document.getElementById('audioJogo');
 '<footer id="footer">' +
 '<button class="butonsEnd" style="width:150px;" onclick="window.location.reload()">Restart</button>'+
 '<button class="butonsEnd" style="width:150px;" onclick="window.history.back()">Opções</button>'+
+'<button class="butonsEnd" style="width:150px;" onclick="location.href = '+"'https://gootopps.epizy.com/'"+'"'+'>GooTopps</button>'+
       '<br>' +
       '<p class="autor">Dino Race 2021 <a href="https://github.com/DevFrota">By Lúcio Frota</a></p>' +
       '<p>Credits - Template code base by <a href="https://github.com/celso-henrique/">Celso Henrique</a></p>' +
