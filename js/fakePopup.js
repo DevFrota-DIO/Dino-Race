@@ -4,7 +4,6 @@ var fundoLi = 0;
 let optFinal = [0, 0];
 var contOpt = 0;
 
-
 const finalOptions = function (valOpt, opt) {
   if (opt == 1 && optFinal[0] == 0) {
     optFinal[0] = valOpt;
@@ -111,7 +110,7 @@ function primSetForm(val, option) {
       "Escolha a combinação de teclas para jogar";
     document.getElementById("optionReturn").style.display = "none";
     document.getElementById("titlePrimOption").style.color = "white";
-    document.getElementById("buttonOk").style.display = "none";
+    document.getElementById("buttonOk1").style.display = "none";
   } else if (option == "keysDefault" || option == "moreKeys") {
     var radios = document.getElementsByName("inputDef");
     for (let i = 0; i < radios.length; i++) {
@@ -124,9 +123,9 @@ function primSetForm(val, option) {
             "Jogue com as teclas 4 para Saltar e 5 para Impulso";
           document.getElementById("optionReturn").style.display = "block";
           document.getElementById("titlePrimOption").style.color = "#95cf39";
-          document.getElementById("buttonOk").style.display = "inline-block";
+          document.getElementById("buttonOk1").style.display = "inline-block";
           document
-            .getElementById("buttonOk")
+            .getElementById("buttonOk1")
             .setAttribute(
               "onclick",
               "randomAudio(1);play(1);finalOptions(0,1)"
@@ -158,9 +157,9 @@ function primSetForm(val, option) {
           "Jogue com as teclas  " +
           document.getElementById("labelOne").innerText +
           ".";
-        document.getElementById("buttonOk").style.display = "inline-block";
+        document.getElementById("buttonOk1").style.display = "inline-block";
         document
-          .getElementById("buttonOk")
+          .getElementById("buttonOk1")
           .setAttribute("onclick", "randomAudio(1);play(1);finalOptions(0,1)");
         varSetKeys[i].checked = false;
       } else if (option == "comb2") {
@@ -168,9 +167,9 @@ function primSetForm(val, option) {
           "Jogue com as teclas  " +
           document.getElementById("labelTwo").innerText +
           ".";
-        document.getElementById("buttonOk").style.display = "inline-block";
+        document.getElementById("buttonOk1").style.display = "inline-block";
         document
-          .getElementById("buttonOk")
+          .getElementById("buttonOk1")
           .setAttribute("onclick", "randomAudio(1);play(1);finalOptions(1,1)");
         varSetKeys[i].checked = false;
       } else if (option == "comb3") {
@@ -178,9 +177,9 @@ function primSetForm(val, option) {
           "Jogue com as teclas  " +
           document.getElementById("labelThree").innerText +
           ".";
-        document.getElementById("buttonOk").style.display = "inline-block";
+        document.getElementById("buttonOk1").style.display = "inline-block";
         document
-          .getElementById("buttonOk")
+          .getElementById("buttonOk1")
           .setAttribute("onclick", "randomAudio(1);play(1);finalOptions(2,1)");
         varSetKeys[i].checked = false;
       }

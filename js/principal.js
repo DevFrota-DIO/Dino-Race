@@ -211,7 +211,7 @@ function create(val) {
             document.getElementById('contadorError').innerHTML = 'BÔNUS   '+contErro;
             blink();
 
-            let delay = 3000; //1 seconds
+            let delay = 3000; 
             document.getElementById("bonus").style.display = "block";
             setTimeout(function () {
               document.getElementById("bonus").style.display = "none";
