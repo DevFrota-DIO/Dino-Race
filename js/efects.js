@@ -25,6 +25,8 @@ var elementJump = document.getElementById("audioJump");
     elementInicio.setAttribute("src",'sons/inicio/inicio'+num+'.mp3');
     elementInicio.volume=0.3;
     } else if(val == 2) {
+      
+      document.getElementById('divTela').style.display = 'inherit';
         let num2 = Math.ceil(Math.random() * soundJogo);
         elementJogo.setAttribute("src",'../sons/jogo/jogo'+num2+'.mp3') ;
         elementJogo.volume=0.3;

@@ -14,7 +14,7 @@ let audioBonus = document.getElementById("audioBonus");
 let isJumping = false;
 let jumpingRight = false;
 let isGameOver = false;
-let posLeft = 550;
+let posLeft;
 let position = 200;
 let contErro = 0;
 let contHits = 0;
@@ -30,6 +30,30 @@ function blink() {
   h1Hits.style.color = '#95cf39';
 
 }
+const positionViewPort1 = [775, 800, 220];
+const positionViewPort2 = [575, 600, 220];
+let newPosition;
+function funcNewPosition() {
+    // Teste Viewport
+    if (document.documentElement.clientWidth == '1366') {
+      console.log('Entrou no teste Viewport 1366');
+      posLeft = 350;
+      corredorJS.style.left = posLeft + "px";
+      newPosition= positionViewPort2;
+      
+      
+    }else{
+      posLeft = 550;
+      corredorJS.style.left = posLeft + "px";
+      newPosition = positionViewPort1;
+      
+    }
+    // Fim Teste
+  
+}
+funcNewPosition();
+
+
 
 function playHits(val) {
   if (val == 1) {
@@ -82,6 +106,7 @@ function handleKeyDown(event) {
     audioJump.currentTime = 0;
     audioJump.loop = false;
     console.log("pulando " + pulo);
+
     if (!isJumping) {
       jump();
     }
@@ -109,6 +134,7 @@ function jump() {
         } else {
           position -= 20;
           corredorJS.style.bottom = position + "px";
+
         }
       }, 20);
     } else {
@@ -120,14 +146,15 @@ function jump() {
 }
 function jumpRight() {
   jumpingRight = true;
-
+let posImpulse = posLeft + 150;
   let impulseInterval = setInterval(() => {
-    if (posLeft >= 700) {
+
+    if (posLeft >= posImpulse) {
       // Recuando
       clearInterval(impulseInterval);
 
       let leftInterval = setInterval(() => {
-        if (posLeft == 550) {
+        if (posLeft == (posImpulse - 150)) {
           clearInterval(leftInterval);
           jumpingRight = false;
         } else {
@@ -172,9 +199,10 @@ function create(val) {
           isGameOver = true;
           randomCreditos(3);
         } else if (
-          pedraPosition > 775 &&
-          pedraPosition < 800 &&
-          position < 220
+          
+          pedraPosition > newPosition[0] &&
+          pedraPosition < newPosition[1] &&
+          position < newPosition[2]
         ) {
           setErro = 1;
           contErro += 1;
@@ -188,9 +216,9 @@ function create(val) {
             console.log("Cuidado já errou " + contErro + " vezes");
           }
         } else if (
-          pedraPosition > 775 &&
-          pedraPosition < 800 &&
-          position >= 220
+          pedraPosition > newPosition[0] &&
+          pedraPosition < newPosition[1] &&
+          position >= newPosition[2]
         ) {
           setErro = 0;
           contHits += 1;

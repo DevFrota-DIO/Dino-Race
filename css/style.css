@@ -22,7 +22,7 @@ html {
   bottom: 200px;
   background-repeat: no-repeat;
   background-size: 100% auto;
-  left: 550px;
+  /* left: 550px; */
   min-width: 400px;
   width: auto;
   height: 300px;
@@ -189,7 +189,7 @@ html {
 
 .tela {
  background-size: 100% 100%;
-
+display: none;
   position: fixed;
   background-image: linear-gradient(to top, #0592c5, #5e93a7, #88D5F1 60%);
   width: 100%;
